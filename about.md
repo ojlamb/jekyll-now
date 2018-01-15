@@ -4,12 +4,16 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I am a Software Engineer and Product Manager. My interests and expertise revolve around geospatial technology data visualization, mapping, and analysis. I currently work at [RedZone Software](http://www.redzone.co/) in Boulder, CO where I lead product and development efforts.
 
-### More Information
+In 2015 I attended [Makers Academy](https://makersacademy.com/) to learn how to build software.
 
-A place to include any other types of information that you'd like to include about yourself.
+In 2013 graduated with from the University of Colorado with a Bachelors Degree in Geography. My Studies focused on Geographic Information Science and Web Mapping.
+
+In the Summer of 2012 I interned at [esri](https://esri.com/) and worked on the first version of ArcGIS Online.
+
+I reside in Denver, CO with my fiancé Alex and dog Jerry.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[mail@ojlamb.com](mailto:mail@ojlamb.com)
