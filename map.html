@@ -1,27 +1,128 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset='utf-8' />
-    <title>Display a map</title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
-    </style>
+	<meta charset='utf-8' />
+	<title>Owen Lamb | Places</title>
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.js'></script>
+	<link href='style.css' rel='stylesheet' />
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.css' rel='stylesheet' />
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		#map {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+		}
+		.legend {
+		  background-color: #fff;
+		  border-radius: 3px;
+		  bottom: 30px;
+		  width: 150px;
+		  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+		  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+		  padding: 10px;
+		  position: absolute;
+		  right: 10px;
+		  z-index: 1;
+		}
+
+		.legend h4 {
+		  margin: 0 0 10px;
+		}
+
+
+		.legend div {
+		  position: relative;
+		}
+
+		.legend div span {
+		  border-radius: 50%;
+		  display: inline-block;
+		  margin-right: 5px;
+		  opacity: 0.8;
+		  text-align: left;
+		}
+
+		.lived {
+			background-color: #69F;
+		}
+		.temporary {
+			background-color: #ffff00;
+		}
+		.visit {
+		    background-color: #9750d8;
+		}
+		.travel {
+			background-color: #FF5800;
+		}
+		.college {
+		    background-color: #0ba10b;
+		}
+
+	</style>
 </head>
+
 <body>
 
-<div id='map'></div>
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoicmVkem9uZXNvZnR3YXJlIiwiYSI6IkNKNXhPNkUifQ.yPI1bZL3nEvDFbdQjeTB-A';
-var map = new mapboxgl.Map({
-    container: 'map', // container id
-    style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
-    zoom: 1 // starting zoom
-});
-</script>
+	<div id='map'></div>
+	<div id='legend' class='legend'>
+	  <h4>My Places</h4>
+		<div><span class="lived" style="width:8px; height:8px;margin: 0 10px"></span>Home</div>
+		<div><span class="temporary" style="width:8px; height:8px;margin: 0 10px"></span>Temporary</div>
+		<div><span class="visit" style="width:8px; height:8px;margin: 0 10px"></span>Visit</div>
+		<div><span class="travel" style="width:8px; height:8px;margin: 0 10px"></span>Travel</div>
+		<div><span class="college" style="width:8px; height:8px;margin: 0 10px"></span>College</div>
+	</div>
+	<script>
+		mapboxgl.accessToken = 'pk.eyJ1IjoicmVkem9uZXNvZnR3YXJlIiwiYSI6IkNKNXhPNkUifQ.yPI1bZL3nEvDFbdQjeTB-A';
+		var map = new mapboxgl.Map({
+			container: 'map', // container id
+			style: 'mapbox://styles/mapbox/dark-v9', // stylesheet location
+			center: [-43.916023, 42.716928],
+			zoom: 2 // starting zoom
+		});
+		map.on('load', function() {
+
+					map.addLayer({
+							"id": "points",
+							"type": "circle",
+							"source": {
+								"type": "geojson",
+								"data": "./data/places.json"
+							},
+							paint: {
+								'circle-color': {
+									property: 'type',
+									type: 'categorical',
+									stops: [
+										['home', '#69f'],
+										['visit', '#9750d8'],
+										['temporary', '#ffff00'],
+										['college', '#0ba10b'],
+										['travel', '#FF5800']
+									]
+								},
+								"circle-stroke-width": 1,
+								'circle-stroke-color': "#fff",
+								'circle-radius': {
+									property: 'length_of_time',
+									type: 'exponential',
+									stops: [
+										[0.1, 3],
+					            		[10, 15]
+									]
+								}
+							}
+					});
+				});
+	</script>
 
 </body>
+
 </html>
