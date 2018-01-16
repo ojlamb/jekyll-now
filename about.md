@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a Software Engineer and Product Manager. My interests and expertise revolve around geospatial technology data visualization, mapping, and analysis. I currently work at [RedZone Software](http://www.redzone.co/) in Boulder, CO where I lead product and development efforts.
+I am a Software Engineer and Product Manager. My interests and expertise revolve around geospatial technology, data visualization, mapping, and analysis. I currently work at [RedZone Software](http://www.redzone.co/) in Boulder, CO where I lead product and development efforts.
 
 In 2015 I attended [Makers Academy](https://makersacademy.com/) to learn how to build software.
 
