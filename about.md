@@ -14,6 +14,11 @@ In the Summer of 2012 I interned at [esri](https://esri.com/) and worked on the 
 
 I reside in Denver, CO with my fiancé Alex and dog Jerry.
 
+### Projects
+[![_config.yml]({{ site.baseurl }}/images/push2-DAlogo.png)](https://www.push2.io/)
+
+[![_config.yml]({{ site.baseurl }}/images/denver_tonight.png)](http://denvertonight.co/)
+
 ### Contact me
 
 [mail@ojlamb.com](mailto:mail@ojlamb.com)
