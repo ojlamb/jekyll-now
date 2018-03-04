@@ -92,7 +92,7 @@ Assuming you want to build a product that is dynamic and flexible, one that does
 
 Basic MJML/Handlebars.js template:
 
-```handlebars
+```html
 <mjml>
   <mj-body>
     <mj-container>
