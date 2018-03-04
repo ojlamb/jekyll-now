@@ -71,7 +71,7 @@ Is your data dynamic and constantly being updated? You can programmatically uplo
 
 Say you get an update and new data is saved to your database. You ultimately want to get this into your mapbox style. You can set up a process or trigger to grab the new data and upload it to Mapbox. You would use this API to get it done. In just a few lines of code!
 
-```
+```javascript
 var upload = require('mapbox-upload');
 var progress = upload({
     file: __dirname + '/test.mbtiles', // Path to mbtiles file on disk. You can also use geojson!
