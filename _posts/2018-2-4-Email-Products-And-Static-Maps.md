@@ -178,4 +178,6 @@ function mjmlToHtml(template, data) {
 }
 ```
 
+![_config.yml]({{ site.baseurl }}/images/email_example.png)
+
 And there you have it! That should send out a nice responsive email with a static map :)
