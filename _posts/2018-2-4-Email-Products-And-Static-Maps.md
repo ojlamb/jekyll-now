@@ -9,7 +9,7 @@ This quote from Brian Timoney's post [Few Interact With Our Interactive Maps–W
 
 While it is exciting to work on interactive web mapping applications with all of the bells and whistles, this approach is costly and time consuming. You are also likely to see a poor return on investment.
 
-# You might be thinking:
+### You might be thinking:
 
 _"I have this cool new idea..."_
 
@@ -31,17 +31,17 @@ In Product Management its important to have a strong grasp of the problem you ar
 
 This article will focus on one of these approaches - Email Products and Static Maps!
 
-# Email Products
+## Email Products
 
 You're probably thinking _"Email? BORING!"_ , or _"Email? Does anyone even open those?"_
 
 Yes, yes and yes. Email is hot right now! [The Skimm](http://theskimm.com/?r=4E76W) raised over 8 million dollars in Series B from 20th Century Fox and has a loyal readership in the millions. [The Hustle](http://ambassadors.thehustle.co/?ref=d463affa46) raised over 1 million dollars in seed funding and also has a loyal readership in the hundreds of thousands. I read both of these articles daily. Will a geospatial email product ever get funding or readership like that? No, never, but we can learn a few things from the mainstream consumer products.
 
-## Fail Fast
+#### Fail Fast
 
 From a technical perspective, developing an email product is easy. You don't have to worry about wrestling with javascript. You also don't have to think about complex issues that arise in application development, for example scalability, load times, security or authentication. With the help of some open source libraries you needn't worry about responsive design or cross-browser/email client support. Email can be a great avenue to get your content in the hands of your users quickly.
 
-## Understand your users
+#### Understand your users
 
 The beautiful thing about email is the tools are vast and fairly simple to use. Mailchimp, Hubspot, Emma, Sendgrid, etc. all come with email analytics out of the box. You can see exactly who subscribes, unsubscribes, opens and interacts with your email. This is valuable information as you seek to understand your users. Are people picking up what you're putting down? The key performance indicators will flesh out whether or not you really do have product market fit. If your subscribers aren't opening your emails, let alone interacting with them, you better go back to the drawing board before even thinking about developing a web or mobile application.
 
@@ -117,7 +117,7 @@ Basic MJML/Handlebars.js template:
 
 Send out emails with node.js and [Nodemailer](https://nodemailer.com/about/).
 
-Lets take a look at an example:
+Lets take a look at an example putting it all together:
 
 ```javascript
 
