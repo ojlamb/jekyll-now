@@ -6,13 +6,14 @@
 name: Owen Lamb
 
 # Short bio or description (displayed in the header)
-description: Geospatial Technologist | Product Manager
+description: Software Developer
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://media.licdn.com/dms/image/C5103AQH1qkUnSVbGVg/profile-displayphoto-shrink_200_200/0?e=1528905600&v=beta&t=AN9-MFJ8p6J75PTCTXxbQE2TxrVC9Zj2Vq3zT0Ev6Gg
 #
 # Flags below are optional
 #
+xclude: [vendor]
 
 # Includes an icon in the footer for each username you enter
 footer-links:
@@ -54,6 +55,8 @@ baseurl:
 
 permalink: /:title/
 
+encoding: utf-8
+
 # The release of Jekyll Now that you're using
 version: v1.2.0
 
@@ -72,7 +75,7 @@ sass:
   style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
-gems:
+plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
 
@@ -80,6 +83,8 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - LICENSE
-  - README.md
-  - CNAME
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
