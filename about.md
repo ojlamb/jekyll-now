@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a Software Engineer and Consultant on the product engineering team @ [Digital McKinsey](https://www.mckinsey.com/business-functions/digital-mckinsey/how-we-help-clients). My interests and expertise revolve around agile development, front end engineering, geospatial technology and  data visualization.
+I am a Software Engineer and Consultant on the product engineering team @ [Digital McKinsey](https://www.mckinsey.com/business-functions/digital-mckinsey/how-we-help-clients). My interests and expertise revolve around agile development, front end engineering, geospatial technology and data visualization.
 
 2016-2018 I led product and development efforts @ [RedZone Software](http://www.redzone.co/) in Boulder, CO.
 
