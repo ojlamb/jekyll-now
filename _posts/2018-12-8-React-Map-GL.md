@@ -97,7 +97,7 @@ Next function in the library is generateMapStyle. Its kind of a doozy but it doe
 
 ```
 import MapGL from 'react-map-gl';
-import { DefaultMapStyle, setLayerStyle, circleLayer, generateMapStyle } from 'common/map';
+import { DefaultMapStyle, setLayerStyle, circleLayer, generateMapStyle } from 'app/map';
 export class MyMap extends React.Component {
   constructor(props) {
     super(props);
