@@ -91,9 +91,9 @@ Lets unpack this a little - We import our mapstyle, and create an immutable map.
 
 We also create functions that help us create our favorite geo layers - points, lines and polygons. These functions take two arguements, the name of the layer (string) `source` and if the layer is interactive or not (boolean) `interactive.` This essentially creates a layer object that can be added to `myStyle` and ultimately the map.
 
-The next function `setLayerStyle`, does exactly that, adds style properties to a layer. The function takes two arguements, a `layer` ( returned object created from one of the functions above) and a `properties` object. The properties must follow the [mapbox style specification](https://www.mapbox.com/mapbox-gl-js/style-spec/). You can also leverage data-driven styling and expressions here. This is some pretty powerful stuff!
+3. The next function `setLayerStyle`, does exactly that, adds style properties to a layer. The function takes two arguements, a `layer` ( returned object created from one of the functions above) and a `properties` object. The properties must follow the [mapbox style specification](https://www.mapbox.com/mapbox-gl-js/style-spec/). You can also leverage data-driven styling and expressions here. This is some pretty powerful stuff!
 
-3. Next function in the library is generateMapStyle. Its kind of a doozy but it does a lot. Its what combines or style, data and layer and adds it to the map. Heres an example of how it all comes together.
+4. Next function in the library is generateMapStyle. Its kind of a doozy but it does a lot. Its what combines or style, data and layer and adds it to the map. Heres an example of how it all comes together.
 ```
   const myLayer = setLayerStyle(circleLayer('myLayer', true), this.getPaintProperties());
   const mapData = <GEOJSON DATA>
@@ -101,7 +101,7 @@ The next function `setLayerStyle`, does exactly that, adds style properties to a
   this.setState({mapStyle, mapData});
 ```
 
-4. Use the map's onLoad function to create the new mapStyle, and manage this through react state. Heres the example end-to-end.
+5. Use the map's onLoad function to create the new mapStyle, and manage this through react state. Heres the example end-to-end.
 
 ```
 import MapGL from 'react-map-gl';
