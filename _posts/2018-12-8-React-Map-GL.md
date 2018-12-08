@@ -3,7 +3,7 @@ layout: post
 title: Working with react-map-gl
 ---
 
-As many of my friends and colleagues know, I really really enjoy working with [Mapbox]('mapbox.com'). There are a number of reasons why, but namely the API is very intuitive and well documented. In my humble opinion they are the best web mapping platform out there. Ability to handle large datasets and data-driven styling are
+As many of my friends and colleagues know, I really really enjoy working with [Mapbox]('mapbox.com'). There are a number of reasons why, but namely the API is very intuitive and well documented. In my humble opinion they are the best web mapping platform out there. Ability to handle large datasets and data-driven styling are a couple of the reasons why I think this.
 
 When my recent project required some geospatial data visualizations, it was an easy decision to go with Mapbox. Like many new apps on the web these days our front ui was built with [React](https://reactjs.org/) and [Redux](https://redux.js.org/). To optimize for delivery we made the decision to work with a react Mapbox component library. There are a few out there, but we landed on [react-map-gl](https://uber.github.io/react-map-gl), an open source library developed by Uber.
 
