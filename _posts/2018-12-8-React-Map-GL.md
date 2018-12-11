@@ -5,7 +5,7 @@ title: Working with react-map-gl
 
 As many of my friends and colleagues know, I really really enjoy working with [Mapbox]('mapbox.com'). There are a number of reasons why, but namely the API is very intuitive and well documented. In my humble opinion they are the best web mapping platform out there. Ability to handle large datasets and data-driven styling are a couple of the reasons why I think this.
 
-When my recent project required some geospatial data visualizations, it was an easy decision to go with Mapbox. Like many new apps on the web these days our front ui was built with [React](https://reactjs.org/) and [Redux](https://redux.js.org/). To optimize for delivery we made the decision to work with a react Mapbox component library. There are a few out there, but we landed on [react-map-gl](https://uber.github.io/react-map-gl), an open source library developed by Uber.
+When my recent project required some geospatial data visualizations, it was an easy decision to go with Mapbox. Like many new apps on the web these days the front ui was built with [React](https://reactjs.org/) and [Redux](https://redux.js.org/). To optimize for delivery I made the decision to work with a react Mapbox component library. There are a few out there, but I landed on [react-map-gl](https://uber.github.io/react-map-gl), an open source library developed by Uber.
 
 
 *"react-map-gl makes using Mapbox GL JS in React applications easy...react-map-gl is a suite of React components for Mapbox GL JS, a WebGL-powered vector and raster tile mapping library. In addition to exposing MapboxGL functionality to React apps, react-map-gl also integrates seamlessly with deck.gl."*
@@ -151,3 +151,10 @@ export class MyMap extends React.Component {
 ```
 
 A couple of things to note here, is the onLoad function. When the map loads for the first time, it will kick off the getMapLayers function, generate the new style and on the next render it the map will consume the new mapStyle with you custom geoJson. Sweet!
+
+### Final Thoughts
+Working with react-map-gl was enjoyable. It did a lot out of the box, and I was able to create some compelling geospatial visualizations with data-driven styling. Development and testing the application with Enzyme + Jest was also straight forward. One limitation however was the ablility to easily dynamically add/remove and toggle on and off layers required by many other web mapping applications. It is doable looking at [this](https://uber.github.io/react-map-gl/#/Examples/dynamic-styling) example but it is not trivial.
+
+If an application required some geospatial capabilities, and visualizations I would use react-map-gl again.
+
+If the functional requirements extend beyond visualization into a lot of interactivity including custom layers I would look to use another library - [react-mapbox-gl](https://github.com/alex3165/react-mapbox-gl).
